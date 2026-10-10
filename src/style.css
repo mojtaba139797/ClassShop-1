@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "YekanBakh-Regular";
+  src: url("../assets/fonts/YekanBakh-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YekanBakh-Bold";
+  src: url("../assets/fonts/YekanBakh-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  all: unset;
+}
+
+button {
+  all: unset;
+}
+
+body {
+  background-color: #f4f5f9;
+  font-family: "YekanBakh-Regular";
+}
+
+#header #nav {
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  /* display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+#header #nav #menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: x-small;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#header #nav #menu a {
+  transition: color 0.3s ease;
+}
+
+#header #nav #menu a:hover {
+  color: rgb(111, 109, 109);
+}
+
+#header #nav h1 {
+  color: #0e738d;
+  font-size: medium;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#header #nav #sabad {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background-color: #17202f;
+  border-radius: 6px;
+  padding: 5px;
+  width: 70px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#header #nav #sabad:hover {
+  background-color: rgb(111, 109, 109);
+}
+
+#header #nav #sabad p {
+  display: none;
+}
+
+#header #nav #sabad span {
+  background-color: #f19e09;
+  border-radius: 6px;
+  padding: 0 6px;
+}
+
+#header #nav #sabad img {
+  border-radius: 100%;
+}
+
+#footer {
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  #header #nav {
+    padding: 8px 16px;
+  }
+
+  #header #nav #menu {
+    gap: 60px;
+    font-size: small;
+  }
+
+  #header #nav #sabad {
+    width: 80px;
+    padding: 5px 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #header #nav {
+    padding: 12px 32px;
+  }
+
+  #header #nav #menu {
+    gap: 60px;
+    font-size: medium;
+  }
+
+  #header #nav #sabad {
+    width: 140px;
+  }
+
+  #header #nav #sabad p {
+    display: block;
+    color: white;
+    font-size: smaller;
+  }
+
+  #header #nav h1 {
+    font-size: x-large;
+  }
+}
