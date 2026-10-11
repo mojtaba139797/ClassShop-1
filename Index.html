@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <header id="header">
-      <nav id="nav">
+    <header class="header">
+      <nav class="nav">
         <h1>فروشگاه کلاس</h1>
-        <div id="menu">
+        <div class="menu">
           <a href="./ContactUs.html">تماس با ما</a>
           <a href="./AbotUs.html">درباره ما</a>
         </div>
-        <a id="sabad" href="./Cart.html">
+        <a class="sabad" href="./Cart.html">
           <img
             src="./assets/icon/sabad.jpg"
             width="30px"
@@ -25,36 +25,133 @@
           <span>3</span>
         </a>
       </nav>
-      <div id="main-header"></div>
+      <div class="main-header">
+        <h2>محصولات</h2>
+        <div class="searchFilter">
+          <div class="search">
+            <img
+              src="./assets/icon/search.png"
+              alt="search"
+              width="10px"
+              height="10px"
+            />
+            <input type="search" placeholder="جستجوی محصول" />
+          </div>
+          <div class="filterContainer">
+            <button class="filter">همه</button>
+            <button class="filter">کتاب</button>
+            <button class="filter">لوازم تحریر</button>
+            <button class="filter">کیف</button>
+          </div>
+        </div>
+      </div>
     </header>
-    <main id="main">
-      <div class="product-Card">
-        <img src="" alt="" />
-        <p></p>
-        <p></p>
-        <button></button>
-      </div>
-      <div class="product-Card">
-        <img src="" alt="" />
-        <p></p>
-        <p></p>
-        <button></button>
-      </div>
-      <div class="product-Card">
-        <img src="" alt="" />
-        <p></p>
-        <p></p>
-        <button></button>
-      </div>
-      <div class="product-Card">
-        <img src="" alt="" />
-        <p></p>
-        <p></p>
-        <button></button>
+    <main class="main">
+      <div class="card-container">
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
+        <div class="product-Card">
+          <img
+            src="./assets/image/ketabOloom.jpg"
+            width="100%"
+            height="50%"
+            alt="ketabOloom"
+          />
+          <a href="./ProductDetail.html" class="title">کتاب علوم</a>
+          <p class="price">300،000 تومان</p>
+          <button>افزودن به سبد</button>
+        </div>
       </div>
     </main>
-    <footer id="footer">
-      <p>Created for students</p>
+    <footer class="footer">
+      <p>فروشگاه کلاس-1 / پروژه فاز اول دوره</p>
+      <p>HTML&css</p>
     </footer>
   </body>
 </html>

@@ -1,0 +1,59 @@
+select {
+  all: unset;
+}
+
+option {
+  all: unset;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.main h2 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: x-small;
+  font-weight: 700;
+}
+
+.form-container .form select {
+  border: 1px solid #d5d8de;
+  border-radius: 4px;
+}
+
+.form-container .form input {
+  border: 1px solid #d5d8de;
+  border-radius: 4px;
+}
+
+.form-container .form .top-form {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.form-container .form .top-form .name {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container .form .top-form .email {
+  display: flex;
+  flex-direction: column;
+}

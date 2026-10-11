@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <header id="header">
-      <nav id="nav">
+    <header class="header">
+      <nav class="nav">
         <a href="./Index.html"><h1>فروشگاه کلاس</h1></a>
-        <div id="menu">
-          <a href="./AbotUs.html">درباره ما</a>
+        <div class="menu">
           <a href="./Index.html">محصولات</a>
+          <a href="./AbotUs.html">درباره ما</a>
         </div>
-        <a id="sabad" href="./Cart.html">
+        <a class="sabad" href="./Cart.html">
           <img
             src="./assets/icon/sabad.jpg"
             width="30px"
@@ -25,6 +25,39 @@
           <span>3</span>
         </a>
       </nav>
+      <div class="main-header"></div>
     </header>
+    <main class="main">
+      <h2>تماس با ما</h2>
+      <div class="form-container">
+        <form class="form" action="">
+          <div class="top-form">
+            <div class="name">
+              <label for="name">نام و نام خانوادگی</label>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="email">
+              <label for="email">ایمیل</label>
+              <input type="email" name="email" id="email" />
+            </div>
+          </div>
+          <label for="selection">موضوع</label>
+          <select name="selection" id="selection">
+            <option value="درباره محصول">درباره محصول</option>
+            <option value="خدمات پس از فروش">خدمات پس از فروش</option>
+            <option value="مغایرت سفارش و کالا">مغایرت سفارش و کالا</option>
+            <option value="مرجوعی">مرجوعی</option>
+          </select>
+          <label for="message">پیام</label>
+          <input type="text" name="message" id="message" />
+          <button>ارسال پیام</button>
+        </form>
+      </div>
+      <div class="contant-way"></div>
+    </main>
+    <footer class="footer">
+      <p>فروشگاه کلاس-1 / پروژه فاز اول دوره</p>
+      <p>HTML&css</p>
+    </footer>
   </body>
 </html>

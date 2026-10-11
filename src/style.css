@@ -1,3 +1,5 @@
+@import url("./ContactUs.css");
+
 @font-face {
   font-family: "YekanBakh-Regular";
   src: url("../assets/fonts/YekanBakh-Regular.woff2") format("woff2");
@@ -26,15 +28,19 @@ button {
   all: unset;
 }
 
+input {
+  all: unset;
+}
+
 body {
   background-color: #f4f5f9;
   font-family: "YekanBakh-Regular";
 }
 
-#header #nav {
+.header .nav {
   background-color: white;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 4px;
@@ -47,7 +53,7 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-#header #nav #menu {
+.header .nav .menu {
   display: flex;
   justify-content: space-between;
   gap: 15px;
@@ -56,24 +62,24 @@ body {
   cursor: pointer;
 }
 
-#header #nav #menu a {
+.header .nav .menu a {
   transition: color 0.3s ease;
 }
 
-#header #nav #menu a:hover {
+.header .nav .menu a:hover {
   color: rgb(111, 109, 109);
 }
 
-#header #nav h1 {
+.header .nav h1 {
   color: #0e738d;
   font-size: medium;
   font-weight: 900;
   cursor: pointer;
 }
 
-#header #nav #sabad {
+.header .nav .sabad {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
@@ -85,65 +91,262 @@ body {
   transition: background-color 0.3s ease;
 }
 
-#header #nav #sabad:hover {
+.header .nav .sabad:hover {
   background-color: rgb(111, 109, 109);
 }
 
-#header #nav #sabad p {
+.header .nav .sabad p {
   display: none;
 }
 
-#header #nav #sabad span {
+.header .nav .sabad span {
+  font-size: small;
+  font-weight: 700;
   background-color: #f19e09;
   border-radius: 6px;
   padding: 0 6px;
 }
 
-#header #nav #sabad img {
+.header .nav .sabad img {
   border-radius: 100%;
 }
 
-#footer {
+.main-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px;
+}
+
+.main-header h2 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+.main-header .searchFilter {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main-header .searchFilter .search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-header .searchFilter .search input {
+  font-family: "YekanBakh-Regular";
+  font-size: small;
+  font-weight: 700;
+  padding: 8px 24px 8px 4px;
+  border: 1px solid #d5d8de;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 300px;
+  background-color: white;
+  color: #757575;
+  z-index: 0;
+}
+
+.main-header .searchFilter .search img {
+  z-index: 1;
+  position: absolute;
+  right: 10px;
+}
+
+.main-header .searchFilter .filterContainer {
+  font-size: small;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.main-header .searchFilter .filterContainer .filter {
+  border: 1px solid #d5d8de;
+  border-radius: 26px;
+  background-color: white;
+  padding: 8px;
+  cursor: pointer;
+  transition:
+    background-color,
+    color 0.5s ease;
+}
+
+.main-header .searchFilter .filterContainer .filter:hover {
+  background-color: #0f7490;
+  color: white;
+}
+
+.main .card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 6px;
+  row-gap: 16px;
+  padding: 8px 12px;
+}
+
+.main .card-container .product-Card {
+  width: 150px;
+  height: 250px;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.main .card-container .product-Card img {
+  border-radius: 12px 12px 0 0;
+}
+
+.main .card-container .product-Card .title {
+  padding-right: 12px;
+  font-size: medium;
+  font-weight: 900;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.main .card-container .product-Card .title:hover {
+  color: #757575;
+}
+
+.main .card-container .product-Card .price {
+  font-size: small;
+  font-weight: 700;
+  padding-right: 12px;
+  color: #757575;
+}
+
+.main .card-container .product-Card button {
+  font-size: small;
+  font-weight: 900;
+  align-self: center;
+  background-color: #0f7490;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
 }
 
 @media (min-width: 768px) {
-  #header #nav {
+  .header .nav {
     padding: 8px 16px;
   }
 
-  #header #nav #menu {
+  .header .nav .menu {
     gap: 60px;
     font-size: small;
   }
 
-  #header #nav #sabad {
+  .header .nav .sabad {
     width: 80px;
     padding: 5px 10px;
+  }
+
+  .main-header {
+    padding-right: 16px;
+  }
+
+  .main-header h2 {
+    font-size: larger;
+    font-weight: 900;
+  }
+
+  .main-header .searchFilter {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .main-header .searchFilter .search input {
+    width: 250px;
+  }
+
+  .main .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    padding: 8px 12px;
+  }
+
+  .main .card-container .product-Card {
+    width: 300px;
+    height: 300px;
+    max-height: 300px;
+    gap: 10px;
+  }
+
+  .main .card-container .product-Card .title {
+    padding-right: 16px;
+  }
+
+  .main .card-container .product-Card .price {
+    padding-right: 16px;
+  }
+
+  .main .card-container .product-Card button {
+    align-self: center;
+    background-color: #0f7490;
+    color: white;
+    padding: 12px 90px;
+    border-radius: 6px;
   }
 }
 
 @media (min-width: 1024px) {
-  #header #nav {
+  .header .nav {
     padding: 12px 32px;
   }
 
-  #header #nav #menu {
+  .header .nav .menu {
     gap: 60px;
     font-size: medium;
   }
 
-  #header #nav #sabad {
+  .header .nav .sabad {
     width: 140px;
   }
 
-  #header #nav #sabad p {
+  .header .nav .sabad p {
     display: block;
     color: white;
     font-size: smaller;
   }
 
-  #header #nav h1 {
+  .header .nav h1 {
     font-size: x-large;
+  }
+
+  .main-header h2 {
+    font-size: x-large;
+    font-weight: 900;
+    padding: 0 14px;
+  }
+
+  .main-header .searchFilter {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 12px;
+  }
+
+  .main .card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 8px 32px;
   }
 }
