@@ -1,0 +1,116 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+}
+
+.main h2 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+.main .cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 8px;
+}
+
+.main .orders {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main .orders .order-card {
+  background-color: white;
+  font-size: x-small;
+  font-weight: 700;
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.main .orders .order-card .order-info {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.main .orders .order-card .order-info .order-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .orders .order-card .order-info .order-name .price {
+  font-size: xx-small;
+  font-weight: 600;
+  color: #7b7c7d;
+}
+
+.main .orders .order-card .counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d5d8de;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.main .cart-container .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.main .cart-container .summary h3 {
+  font-size: small;
+  font-weight: 900;
+}
+
+.main .cart-container .summary .total-price,
+.total-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: x-small;
+  font-weight: 700;
+}
+
+.main .cart-container .summary .total-quantity {
+  color: #7b7c7d;
+}
+
+.main .cart-container .summary .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  font-size: x-small;
+  font-weight: 700;
+}
+
+.main .cart-container .summary .button-container #sabt {
+  background-color: black;
+  color: white;
+  padding: 8px 64px;
+  border-radius: 8px;
+}
+
+.main .cart-container .summary .button-container #kharid {
+  color: #0f7191;
+}
+
+.footer {
+  margin-top: 200px;
+}

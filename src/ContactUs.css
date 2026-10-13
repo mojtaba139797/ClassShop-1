@@ -6,7 +6,18 @@ option {
   all: unset;
 }
 
+textarea {
+  all: unset;
+}
+
 .main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.main .contact {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -16,6 +27,7 @@ option {
 .main h2 {
   font-size: medium;
   font-weight: 900;
+  padding: 0 8px;
 }
 
 .form-container {
@@ -35,11 +47,14 @@ option {
 .form-container .form select {
   border: 1px solid #d5d8de;
   border-radius: 4px;
+  padding: 6px 6px 6px 0;
+  cursor: pointer;
 }
 
 .form-container .form input {
   border: 1px solid #d5d8de;
   border-radius: 4px;
+  padding: 4px 0;
 }
 
 .form-container .form .top-form {
@@ -56,4 +71,105 @@ option {
 .form-container .form .top-form .email {
   display: flex;
   flex-direction: column;
+  width: 400px;
+  max-width: 400px;
+}
+
+.form-container .form #message {
+  height: 50px;
+  border: 1px solid #d5d8de;
+  border-radius: 4px;
+  padding: 4px 4px 4px 0;
+}
+
+.form-container .form button {
+  background-color: #0d7490;
+  color: white;
+  text-align: center;
+  width: 50px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.main .contact .contant-way {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: small;
+  font-weight: 700;
+}
+
+.main .contact .contant-way h3 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+.footer {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .form-container .form {
+    font-size: small;
+    font-weight: 700;
+  }
+
+  .form-container .form .top-form .name {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  .form-container .form .top-form .email {
+    width: 410px;
+    max-width: 410px;
+  }
+
+  .form-container .form button {
+    width: 100px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  .form-container .form #message {
+    height: 100px;
+  }
+
+  .main h2 {
+    font-size: larger;
+    font-weight: 900;
+  }
+
+  .main .contact .contant-way {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 0 16px;
+  }
+
+  .main .contact {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .main .contact .contant-way {
+    height: 230px;
+    padding: 8px;
+    font-size: small;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .footer {
+    margin-top: 225px;
+  }
 }
