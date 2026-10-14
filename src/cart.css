@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 8px;
+  padding: 8px 4px;
 }
 
 .main h2 {
@@ -32,7 +32,7 @@
   border-radius: 8px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
@@ -48,13 +48,33 @@
   flex-direction: column;
 }
 
+.main .orders .order-card .order-info .order-name .name {
+  cursor: pointer;
+}
+
 .main .orders .order-card .order-info .order-name .price {
   font-size: xx-small;
   font-weight: 600;
   color: #7b7c7d;
 }
 
-.main .orders .order-card .counter {
+.main .orders .order-card .counter-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.main .orders .order-card .counter-delete .counter-totalPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.main .orders .order-card .counter-delete .counter-totalPrice .counter {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -62,6 +82,14 @@
   border: 1px solid #d5d8de;
   border-radius: 4px;
   padding: 4px 8px;
+}
+
+.main .orders .order-card .counter-delete .counter-totalPrice .counter span {
+  cursor: pointer;
+}
+
+.main .orders .order-card img {
+  cursor: pointer;
 }
 
 .main .cart-container .summary {
@@ -103,7 +131,7 @@
 .main .cart-container .summary .button-container #sabt {
   background-color: black;
   color: white;
-  padding: 8px 64px;
+  padding: 8px 72px;
   border-radius: 8px;
 }
 
@@ -113,4 +141,107 @@
 
 .footer {
   margin-top: 200px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    gap: 16px;
+    padding: 8px 16px;
+  }
+
+  .main h2 {
+    font-size: larger;
+    font-weight: 900;
+  }
+
+  .main .orders .order-card {
+    padding: 8px;
+    font-size: smaller;
+    font-weight: 700;
+  }
+
+  .main .orders .order-card .counter-delete {
+    gap: 32px;
+  }
+
+  .main .orders .order-card .counter-delete .counter-totalPrice {
+    gap: 16px;
+  }
+
+  .main .orders .order-card .counter-delete .counter-totalPrice .counter {
+    gap: 16px;
+    padding: 4px 16px;
+  }
+
+  .main .cart-container .summary {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    gap: 16px;
+    padding: 8px 24px;
+  }
+
+  .main .cart-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 0 8px;
+  }
+
+  .main .orders .order-card {
+    font-size: small;
+    font-weight: 700;
+    padding: 16px 8px;
+    gap: 16px;
+    width: 750px;
+  }
+
+  .main .orders .order-card .order-info .order-name .price {
+    font-size: x-small;
+    font-weight: 700;
+  }
+
+  .main .cart-container .summary {
+    gap: 16px;
+    padding: 16px;
+    width: 350px;
+    height: 200px;
+    margin: 0;
+  }
+
+  .main .cart-container .summary .total-price,
+  .total-quantity {
+    font-size: small;
+  }
+
+  .main .cart-container .summary .button-container #sabt {
+    padding: 8px 40px;
+  }
+
+  .footer {
+    margin-top: 450px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main .cart-container {
+    gap: 48px;
+  }
+
+  .main .orders .order-card {
+    width: 900px;
+  }
+
+  .main .cart-container .summary .button-container #sabt {
+    padding: 8px 56px;
+  }
+
+  .footer {
+    margin-top: 450px;
+  }
 }
