@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>جزئیات محصول</title>
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/ProductDetail.css" />
   </head>
   <body>
     <header class="header">
       <nav class="nav">
         <a href="./Index.html"><h1>فروشگاه کلاس</h1></a>
         <div class="menu">
-          <a href="./Index.html">محصولات</a>
+          <!-- <a href="./Index.html">محصولات</a> -->
           <a href="./ContactUs.html">تماس با ما</a>
           <a href="./AbotUs.html">درباره ما</a>
         </div>
@@ -26,7 +27,31 @@
           <span>3</span>
         </a>
       </nav>
-      <div class="main-header"></div>
     </header>
+    <main class="main">
+      <img src="./assets/image/kif-1.jfif" alt="product-img" id="product-img" />
+      <div class="product-info">
+        <button class="filter">کیف</button>
+        <h2 id="product-name">کیف مدرسه</h2>
+        <p id="product-price">50،000 تومان</p>
+        <p id="describtion">
+          توضیح محصول از همون آبجکت توی آرایه خونده میشه. اگه شناسه ی آدرس درست
+          نباشه، به جای این صفحه، یک پیام ((محصول پیدا نشد)) نمایش داده میشه.
+        </p>
+        <div class="quantity">
+          <div class="counter">
+            <span class="increase">-</span>
+            <p>1</p>
+            <span class="decrease">+</span>
+          </div>
+          <button>افزودن به سبد</button>
+        </div>
+        <a href="./Index.html">برگشت به فهرست محصولات</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>فروشگاه کلاس-1 / پروژه فاز اول دوره</p>
+      <p>HTML&css</p>
+    </footer>
   </body>
 </html>
