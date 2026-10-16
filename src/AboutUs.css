@@ -1,0 +1,132 @@
+.main {
+  padding: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 16px;
+}
+
+.main #shop-img {
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.main .about-shop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main .about-shop h2 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+.main .about-shop .describ,
+.made {
+  font-size: x-small;
+  font-weight: 600;
+  color: #67696a;
+}
+
+.main .about-shop .features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.main .about-shop .features h3 {
+  font-size: medium;
+  font-weight: 900;
+}
+
+.main .about-shop .features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.main .about-shop .features ul li {
+  font-size: x-small;
+  font-weight: 600;
+  list-style: square;
+}
+
+.main .about-shop a {
+  font-size: small;
+  font-weight: 900;
+  background-color: #0f7490;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  margin-right: 8px;
+  width: 70px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 8px 16px;
+  }
+
+  .main #shop-img {
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .main .about-shop {
+    padding: 0 32px 0 0;
+  }
+
+  .main .about-shop h2 {
+    font-size: large;
+  }
+
+  .main .about-shop .describ,
+  .made {
+    font-size: small;
+  }
+
+  .main .about-shop .features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main .about-shop .features h3 {
+    font-size: large;
+  }
+
+  .main .about-shop .features ul li {
+    font-size: small;
+  }
+
+  .main .about-shop a {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    align-items: flex-start;
+    /* display: flex;
+    flex-direction: row;
+    gap: 24px; */
+  }
+
+  .main .about-shop {
+    padding: 0 16px 0 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main #shop-img {
+    max-width: 600px;
+  }
+}
