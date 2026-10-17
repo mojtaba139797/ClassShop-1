@@ -36,6 +36,19 @@ body {
   font-family: "YekanBakh-Regular";
 }
 
+body .error {
+  color: red;
+  margin: 0 auto;
+  font-size: larger;
+  font-weight: 900;
+}
+
+body .noResults {
+  margin: 0 auto;
+  font-size: larger;
+  font-weight: 900;
+}
+
 .header .nav {
   background-color: white;
   display: flex;
@@ -193,7 +206,7 @@ body {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -203,8 +216,8 @@ body {
 
 .main .card-container .product-Card .title {
   padding-right: 12px;
-  font-size: medium;
-  font-weight: 900;
+  font-size: small;
+  font-weight: 700;
   cursor: pointer;
   transition: color 0.3s ease;
 }
