@@ -10,6 +10,7 @@ async function products() {
     const fragrancesBtn = document.querySelector("#fragrances");
     const furnitureBtn = document.querySelector("#furniture");
     const groceriesBtn = document.querySelector("#groceries");
+    const allBtn = document.querySelector("#all");
 
     function createProductCard(product) {
       const productCard = document.createElement("div");
@@ -21,7 +22,7 @@ async function products() {
             height="50%"
             alt=${product.title}
           />
-          <a href="./ProductDetail.html" class="title">${product.title}</a>
+          <a href="./ProductDetail.html?id=${product.id}" class="title">${product.title}</a>
           <p class="price">${product.price}تومان</p>
           <button>افزودن به سبد</button>
       `;
@@ -33,30 +34,28 @@ async function products() {
         (product) => product.category === category,
       );
       console.log(filteredProducts);
+      renderProducts(filteredProducts);
+    }
+
+    function renderProducts(products) {
       cardContainer.innerHTML = ``;
-      filteredProducts.forEach((product) => {
-        const filteredProductCard = createProductCard(product);
-        cardContainer.appendChild(filteredProductCard);
+      products.forEach((product) => {
+        const productCard = createProductCard(product);
+        cardContainer.appendChild(productCard);
       });
     }
 
-    products.forEach((product) => {
-      const productCard = createProductCard(product);
-      cardContainer.appendChild(productCard);
-    });
+    renderProducts(products);
 
     searchInput.addEventListener("keyup", (e) => {
       const searchValue = searchInput.value;
       const newProducts = products.filter((product) =>
         product.title.includes(searchValue),
       );
-      cardContainer.innerHTML = ``;
       if (newProducts.length > 0) {
-        newProducts.forEach((newProduct) => {
-          const newProductCard = createProductCard(newProduct);
-          cardContainer.appendChild(newProductCard);
-        });
+        renderProducts(newProducts);
       } else {
+        cardContainer.innerHTML = "";
         const noResults = document.createElement("div");
         noResults.className = "noResults";
         noResults.innerHTML = `
@@ -66,32 +65,19 @@ async function products() {
       }
     });
 
+    allBtn.addEventListener("click", () => {
+      renderProducts(products);
+      console.log(products);
+    });
+
     beautyBtn.addEventListener("click", () => {
       const category = beautyBtn.id;
       filterByCategory(category);
-      // const beautyProducts = products.filter(
-      //   (product) => product.category === category,
-      // );
-      // console.log(beautyProducts);
-      // cardContainer.innerHTML = ``;
-      // beautyProducts.forEach((product) => {
-      //   const beautyProductCard = createProductCard(product);
-      //   cardContainer.appendChild(beautyProductCard);
-      // });
     });
 
     fragrancesBtn.addEventListener("click", () => {
       const category = fragrancesBtn.id;
       filterByCategory(category);
-      // const fragrancesProducts = products.filter(
-      //   (product) => product.category === category,
-      // );
-      // console.log(fragrancesProducts);
-      // cardContainer.innerHTML = ``;
-      // fragrancesProducts.forEach((product) => {
-      //   const fragrancesProductCard = createProductCard(product);
-      //   cardContainer.appendChild(fragrancesProductCard);
-      // });
     });
 
     furnitureBtn.addEventListener("click", () => {
