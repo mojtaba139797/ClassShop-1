@@ -11,6 +11,12 @@ async function products() {
     const furnitureBtn = document.querySelector("#furniture");
     const groceriesBtn = document.querySelector("#groceries");
     const allBtn = document.querySelector("#all");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartQuantity = cart.reduce((acc, product) => {
+      return acc + product.quntity;
+    }, 0);
+    const quantityElement = document.querySelector(".cartQuantity");
+    quantityElement.innerHTML = `${cartQuantity}`;
 
     function createProductCard(product) {
       const productCard = document.createElement("div");
