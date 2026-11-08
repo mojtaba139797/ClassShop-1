@@ -10,6 +10,13 @@ async function productDetails() {
     const products = await getProducts();
     const thisProduct = products.find((product) => product.id === Number(id));
 
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartQuantity = cart.reduce((acc, product) => {
+      return acc + product.quntity;
+    }, 0);
+    const quantityElement = document.querySelector(".cartQuantity");
+    quantityElement.innerHTML = `${cartQuantity}`;
+
     // cart.push(addedProduct);
     // console.log(cart);
 
@@ -30,19 +37,19 @@ async function productDetails() {
           </div>
           <button id="addToCart">افزودن به سبد</button>
         </div>
-        <a href="./Index.html">برگشت به فهرست محصولات</a>
+        <a href="./index.html">برگشت به فهرست محصولات</a>
       </div>
     `;
     const addToCartBtn = document.querySelector("#addToCart");
     addToCartBtn.addEventListener("click", () => {
       let cart = localStorage.getItem("cart");
-      console.log(cart);
+      console.log("قبل:", cart);
       if (cart) {
         cart = JSON.parse(cart);
       } else {
         cart = [];
       }
-      console.log(cart);
+      console.log("بعد length:", cart.length);
       let addedProduct = {
         id: thisProduct.id,
         title: thisProduct.title,
@@ -58,12 +65,17 @@ async function productDetails() {
       } else {
         cart.push(addedProduct);
       }
-      console.log(cart);
+      console.log("بعد از push:", [...cart]);
       localStorage.setItem("cart", JSON.stringify(cart));
       console.log(localStorage.getItem("cart"));
     });
   } catch (error) {
     console.error(error);
+    const main = document.querySelector(".main");
+    const wrong = document.createElement("p");
+    wrong.className = "error";
+    wrong.innerHTML = `خطایی رخ داد!!!`;
+    main.appendChild(wrong);
   }
 }
 
